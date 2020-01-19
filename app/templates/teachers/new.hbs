@@ -1,1 +1,11 @@
+<div class="jumbotron">
+  <div class="form-horizontal form-group form-group-lg row">
+     <div class="col-sm-12 col-md-6">
+       {{input type="text" value=name class="form-control" placeholder="Teacher Name" autofocus="autofocus"}}
+     </div>
+     <div class="col-sm-12 col-md-6">
+       <button class="btn btn-success btn-lg btn-block" {{action 'saveTeacher'}} disabled={{isDisabled}}>Create Teacher</button>
+     </div>
+   </div>
+</div>
 {{outlet}}
