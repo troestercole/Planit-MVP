@@ -28,8 +28,16 @@ a {cursor: pointer;}
 }
 
 /**
-*** Input Group / Select
+*** Input Group / Select / Form
 **/
+
+textarea {
+  height: 108px !important;
+}
+
+.form-separator {
+  margin-top: 16px;
+}
 
 .select-styling {
   height: 46px;

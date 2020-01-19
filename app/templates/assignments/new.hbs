@@ -1,1 +1,24 @@
+<div class="jumbotron">
+  <div class="form-horizontal form-group form-group-lg row">
+     <div class="col-sm-12 col-md-6">
+       {{input type="text" value=title class="form-control" placeholder="Assignment Title" autofocus="autofocus"}}
+       <div class="input-group mb-3 form-separator">
+        <div class="input-group-prepend">
+          {{#link-to 'courses.new' class="btn btn-success" type="button"}}{{fa-icon "plus-circle" class="plus"}}{{/link-to}}
+        </div>
+       <select class="custom-select select-styling" id="inputGroupSelect03" onchange={{action "setSelection" value="target.value"}}>
+          <option selected disabled>Select Course</option>
+          {{#each model as |course|}}
+            <option value={{course.id}}>{{course.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+        {{input id="dueDate" type="date" value=dueDate class="form-control form-separator" placeholder="Due Date " data-date-format="MM/DD/YYYY"}}
+     </div>
+     <div class="col-sm-12 col-md-6">
+       {{textarea class="form-control description-text" placeholder="Description" rows="3" value=description}}
+       <button class="btn btn-success btn-lg btn-block form-separator" {{action 'saveAssignment'}} disabled={{isDisabled}}>Create Assignment</button>
+     </div>
+   </div>
+</div>
 {{outlet}}
