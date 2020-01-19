@@ -1,5 +1,26 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand">Planit</div>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        {{#link-to "assignments" tagName="li"}}<a>Assignments</a>{{/link-to}}
+        {{#link-to "courses" tagName="li"}}<a>Course</a>{{/link-to}}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">New <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            {{#link-to "assignments.new" tagName="li"}}<a>Assignment</a>{{/link-to}}
+            {{#link-to "courses.new" tagName="li"}}<a>Course</a>{{/link-to}}
+            {{#link-to "teachers.new" tagName="li"}}<a>Teacher</a>{{/link-to}}
+          </ul>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container-fluid -->
+</nav>
+<div class="container">
+  {{outlet}}
+</div>
