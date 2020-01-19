@@ -6,6 +6,15 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyA_uPa_43KfgsmaGJgGZHufloiNLRlm5PE",
+      authDomain: "planit-academic-planner.firebaseapp.com",
+      databaseURL: "https://planit-academic-planner.firebaseio.com",
+      projectId: "planit-academic-planner",
+      storageBucket: "planit-academic-planner.appspot.com",
+      messagingSenderId: "1025140290349",
+      appId: "1:1025140290349:web:6a3802d3dd88c8d442d9a4"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
